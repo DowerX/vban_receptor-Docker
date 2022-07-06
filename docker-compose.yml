@@ -1,0 +1,8 @@
+version: "3.2"
+services:
+  receptor:
+    image: dowerx/vban_receptor
+    network_mode: host
+    devices:
+      - /dev/snd:/dev/snd
+    command: "-i 192.168.11.128 -p 3333 -s pi"
